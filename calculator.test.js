@@ -24,3 +24,8 @@ test('returns sum of multiple numbers', () => {
 test('handles newlines as delimiters', () => {
   expect(add("1\n2,3")).toBe(6);
 });
+
+//for custom delimiter
+test('supports custom delimiter', () => {
+  expect(add("//;\n1;2")).toBe(3);
+});
