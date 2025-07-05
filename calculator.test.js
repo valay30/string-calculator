@@ -29,3 +29,13 @@ test('handles newlines as delimiters', () => {
 test('supports custom delimiter', () => {
   expect(add("//;\n1;2")).toBe(3);
 });
+
+//for negative numbers
+test('throws on negative numbers', () => {
+  expect(() => add("1,-2")).toThrow("negative numbers not allowed -2");
+});
+
+//for multiple negative numbers
+test('throws on multiple negative numbers', () => {
+  expect(() => add("1,-2,-3")).toThrow("negative numbers not allowed -2,-3");
+});
